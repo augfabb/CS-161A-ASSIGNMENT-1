@@ -1,20 +1,20 @@
 // ------------- FILE HEADER -------------
-// Author ✅: 
-// Assignment ✅:
-// Date ✅:
+// Author ✅: August Fabbri
+// Assignment ✅: 1
+// Date ✅: 9/28/2025
 // Citations: 
 
 
 // ------------- ZYBOOKS SCORES -------------
-// Chapter ✅: 
-// Participation ✅: 
-// Challenge ✅:
-// Labs ✅:
+// Chapter ✅: 1
+// Participation ✅: 100
+// Challenge ✅: 100
+// Labs ✅: 100
 
 
 // ------------- DISCORD POSTS -------------
 // https://discord.com/invite/URYKKf8YHm
-// Count ✅:
+// Count ✅: 1
 // Links (Optional): 
 
 
@@ -45,28 +45,34 @@ int main(int argc, char* argv[]) {
   int gross_pay = 0;
   double federal_tax_witholding_usd = 0.0;
   double net_pay_usd = 0.0;
-  double total_withholding_usd = 0.0;
+  
 
   cout << "Welcome to my Weekly Payroll program!!" << endl;
+  
   cout << "Enter your employee ID number (numbers only):";
   cin >> employee_id;
+ 
   cout << "Enter number of hours worked (whole numbers):" << endl;
   cin >> hours_worked;
+ 
   cout << "Enter the hourly rate:";
   cin >> usd_per_hour;
+ 
   cout << "Enter the federal withholding rate";
   cin >> federal_withholding_percent;
 
   gross_pay = hours_worked * usd_per_hour;
   double decimal_tax_witholding_usd = federal_withholding_percent/100;
-  total_withholding_usd = gross_pay * decimal_tax_witholding_usd;
-  net_pay_usd = gross_pay - total_withholding_usd;
+  federal_tax_witholding_usd = gross_pay * decimal_tax_witholding_usd;
+  net_pay_usd = gross_pay - federal_tax_witholding_usd;
 
 
   cout << "Your Payroll Summary:" << endl;
   cout << "Total Gross Pay: $" << gross_pay << endl;
   cout << "Federal Tax Withholding: $" << federal_tax_witholding_usd << endl;
   cout << "Net Pay: $" << net_pay_usd << endl;
+
+  cout << "Thank you for using my payroll program:)";
 
   
   return 0;
@@ -133,6 +139,19 @@ DATA   net_pay_usd
 
 
 SAMPLE RUNS
-Copy from assignment document.
+
+Welcome to my Weekly Payroll program!!
+Enter your employee ID number (numbers only): 34567
+Enter number of hours worked (whole numbers): 40
+Enter the hourly rate: 17
+Enter the federal withholding rate: 15
+
+Your Payroll Summary:
+Total Gross Pay: $680
+Federal Tax Withholding: $102
+Net Pay: $578
+
+Thank you for using my payroll program:)
+
 
 */
