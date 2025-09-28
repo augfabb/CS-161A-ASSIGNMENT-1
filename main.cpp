@@ -46,18 +46,25 @@ int main(int argc, char* argv[]) {
   double federal_tax_witholding_usd = 0.0;
   double net_pay_usd = 0.0;
 
+  cout << "Welcome to my Weekly Payroll program!!" << endl;
+  cout << "Enter your employee ID number (numbers only):";
+  cin >> employee_id;
+  cout << "Enter number of hours worked (whole numbers):" << endl;
+  cin >> hours_worked;
+  cout << "Enter the hourly rate:";
+  cin >> usd_per_hour;
+  cout << "Enter the federal withholding rate";
+  cin >> federal_tax_witholding_usd;
+
   gross_pay = hours_worked * usd_per_hour;
   double decimal_tax_witholding_usd = federal_withholding_percent/100;
-  double net_pay_usd = gross_pay * decimal_tax_witholding_usd;
+  net_pay_usd = gross_pay * decimal_tax_witholding_usd;
 
-  
+  cout << "Your Payroll Summary:" << endl;
+  cout << "Total Gross Pay: $" << gross_pay << endl;
+  cout << "Federal Tax Withholding: $" << federal_tax_witholding_usd << endl;
+  cout << "Net Pay: $" << net_pay_usd << endl;
 
-
-
-
-  
-  
-  
   
   return 0;
 }
@@ -105,9 +112,9 @@ INPUT    int usd_per_hour
 PROMPT "Enter the federal withholding rate"
 INPUT    federal_withholding_percent
 
-MESSAGE "Your Payroll Summary:"
-
 CALCULATIONS DONE HERE
+
+MESSAGE "Your Payroll Summary:"
 
 LABEL "Total Gross Pay: $"
 DATA   gross_pay
