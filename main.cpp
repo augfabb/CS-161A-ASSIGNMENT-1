@@ -54,7 +54,7 @@ int main(int argc, char* argv[]) {
   cout << "Enter the hourly rate:";
   cin >> usd_per_hour;
   cout << "Enter the federal withholding rate";
-  cin >> federal_tax_witholding_usd;
+  cin >> federal_withholding_percent;
 
   gross_pay = hours_worked * usd_per_hour;
   double decimal_tax_witholding_usd = federal_withholding_percent/100;
