@@ -40,11 +40,12 @@ int main(int argc, char* argv[]) {
   int employee_id = 0;
   int hours_worked = 0;
   int usd_per_hour = 0;
-  int federal_withholding_percent = 0;
+  double federal_withholding_percent = 0;
 
   int gross_pay = 0;
   double federal_tax_witholding_usd = 0.0;
   double net_pay_usd = 0.0;
+  double total_withholding_usd = 0.0;
 
   cout << "Welcome to my Weekly Payroll program!!" << endl;
   cout << "Enter your employee ID number (numbers only):";
@@ -58,7 +59,9 @@ int main(int argc, char* argv[]) {
 
   gross_pay = hours_worked * usd_per_hour;
   double decimal_tax_witholding_usd = federal_withholding_percent/100;
-  net_pay_usd = gross_pay * decimal_tax_witholding_usd;
+  total_withholding_usd = gross_pay * decimal_tax_witholding_usd;
+  net_pay_usd = gross_pay - total_withholding_usd;
+
 
   cout << "Your Payroll Summary:" << endl;
   cout << "Total Gross Pay: $" << gross_pay << endl;
