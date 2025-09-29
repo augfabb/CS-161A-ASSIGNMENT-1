@@ -19,9 +19,9 @@
 
 
 // ------------- DESIGN DOCUMENT -------------
-// A. INPUT ✅: 
-// B. OUTPUT ✅:
-// C. CALCULATIONS ✅:
+// A. INPUT ✅: yes
+// B. OUTPUT ✅: yes
+// C. CALCULATIONS ✅: yes
 // D. LOGIC and ALGORITHMS ✅:
 //    (Optional) flow chart link or file name: 
 
